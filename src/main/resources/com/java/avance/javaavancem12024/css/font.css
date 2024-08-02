@@ -1,0 +1,22 @@
+
+/************************ Figtree *********************************/
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../font/figtree/static/Figtree-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../font/figtree/static/Figtree-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../font/figtree/static/Figtree-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("../font/figtree/static/Figtree-BoldItalic.ttf");
+}

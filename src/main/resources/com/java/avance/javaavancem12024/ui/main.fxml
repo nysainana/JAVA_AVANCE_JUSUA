@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane fx:id="root" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.avance.javaavancem12024.ui.Main">
+   <children>
+      <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="869.0" styleClass="root">
+         <top>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Fichier">
+                  <items>
+                        <MenuItem fx:id="menuNew" mnemonicParsing="false" text="Nouveau">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                      <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" text="Enrégistrer sous">
+                          <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                          </accelerator>
+                      </MenuItem>
+                      <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="menuQuiter" mnemonicParsing="false" text="Quiter">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Modification">
+                  <items>
+                    <MenuItem fx:id="menuArreter" mnemonicParsing="false" text="Arreter">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="ESCAPE" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="menuDelete" mnemonicParsing="false" text="Supprimer">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="DELETE" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                      <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuUp" mnemonicParsing="false" text="Déplacer vers le haut">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="UP" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="menuDown" mnemonicParsing="false" text="Déplacer vers le bas">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="DOWN" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="menuLeft" mnemonicParsing="false" text="Déplacer vers la gauche">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="LEFT" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="menuRight" mnemonicParsing="false" text="Déplacer vers la droite">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="RIGHT" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Aide">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane fx:id="scrooCanvas" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" styleClass="scrool-canvas" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" styleClass="box-option" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0">
+                     <children>
+                        <VBox alignment="CENTER" styleClass="box-option-item">
+                           <children>
+                              <ToggleButton fx:id="buttonDrawing" mnemonicParsing="false" text="ToggleButton">
+                                 <graphic>
+                                    <FontIcon iconLiteral="cil-border-style" />
+                                 </graphic>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="optionGroup" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="buttonRectangle" layoutX="13.0" layoutY="15.0" mnemonicParsing="false" text="ToggleButton" toggleGroup="$optionGroup">
+                                 <graphic>
+                                    <FontIcon iconLiteral="cil-rectangle" />
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="buttonCursor" mnemonicParsing="false" selected="true" text="ToggleButton" toggleGroup="$optionGroup">
+                                 <graphic>
+                                    <FontIcon iconLiteral="cil-cursor" />
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" styleClass="box-option-item">
+                           <children>
+                              <ToggleButton fx:id="buttonDoor" mnemonicParsing="false" text="ToggleButton" toggleGroup="$optionGroup">
+                                 <graphic>
+                                    <FontIcon iconLiteral="cil-door" />
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="buttonWindow" mnemonicParsing="false" text="ToggleButton" toggleGroup="$optionGroup">
+                                 <graphic>
+                                    <FontIcon iconLiteral="cil-window" />
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <AnchorPane styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="15.0" layoutY="5.0" spacing="5.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <FontIcon iconLiteral="cib-java" styleClass="logo" />
+                              <Label fx:id="labelAppName" alignment="BOTTOM_CENTER" styleClass="app-name" text="App name" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="20.0" styleClass="footer" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

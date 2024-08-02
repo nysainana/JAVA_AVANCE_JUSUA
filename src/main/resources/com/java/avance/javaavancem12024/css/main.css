@@ -1,0 +1,263 @@
+
+@import "font.css";
+
+.root {
+    -app-bg-color: #282a36;
+    -app-bg-dark: #21222c;
+    -app-border: #BBBBBB;
+    -app-primary: #076188;
+    -app-danger: #e55353;
+    -app-white: #F0F0F0;
+    -app-hover: #373844;
+}
+
+.root *{
+    -fx-text-fill: -app-white;
+    -fx-font-size: 12px;
+    -fx-font-family: Figtree, SansSerif;
+}
+
+.tool-tip-label {
+    -fx-background-color: #21222C;
+    -fx-text-fill: #F0F0F0;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+}
+
+.scrool-canvas {
+    -fx-background-image: url("../image/bg.png");
+}
+
+/***************** HEADER **********************/
+
+.header {
+    -fx-background-color: -app-bg-color;
+    -fx-pref-height: 50px;
+    -fx-effect: dropshadow(one-pass-box, #0005, 10, 0.2, 0, 3);
+}
+
+.header * {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.header .app-name {
+    -fx-pref-height: 30px;
+}
+
+.header .logo {
+    -fx-icon-size: 30px;
+    -fx-icon-color: -app-white;
+}
+
+/****************** BOX OPTION ***************************/
+
+.box-option {
+    -fx-spacing: 8px;
+    -fx-effect: dropshadow(one-pass-box, #0005, 10, 0.1, 0, 0);
+}
+
+.box-option-item {
+    -fx-padding: 5px 3px;
+    -fx-background-radius: 5px;
+    -fx-spacing: 5px;
+    -fx-background-color: -app-bg-color;
+}
+
+.box-option-item .button,
+.box-option-item .toggle-button {
+    -fx-content-display: graphic-only;
+    -fx-padding: 6px;
+    -fx-background-color: -app-bg-color;
+}
+
+.box-option-item .button:hover,
+.box-option-item .toggle-button:hover {
+    -fx-background-color: -app-hover;
+}
+
+.box-option-item .toggle-button:selected {
+    -fx-background-color: -app-primary;
+}
+
+.box-option-item .button .ikonli-font-icon,
+.box-option-item .toggle-button .ikonli-font-icon {
+    -fx-icon-color: -app-white;
+    -fx-icon-size: 20px;
+}
+
+
+/*************************** Separator ********************************/
+
+.separator > *{
+    -fx-border-color: -app-border;
+    -fx-border-width: 1;
+}
+
+/*********************************menu*************************/
+
+.menu-bar, .context-menu{
+    -fx-background-color: #2c2c2c;
+    -fx-border-width: 0;
+}
+
+.menu-bar .label{
+    -fx-text-fill: #bbbbbb;
+}
+
+.radio-menu-item:hover,
+.check-menu-item:hover,
+.menu-item:hover,
+.menu:hover,
+.radio-menu-item:focused,
+.check-menu-item:focused,
+.menu-item:focused,
+.menu:focused{
+    -fx-background-color: #727272;
+}
+
+/*****************************scrool pane****************************/
+
+.scroll-pane{
+    -fx-border-width: 0;
+    -fx-fit-to-width: true;
+    -fx-padding: 0;
+}
+
+.scroll-pane,
+.scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane-form,
+.scroll-pane-control{
+    -fx-hbar-policy: never;
+    -fx-background-color: -app-bg-color;
+}
+
+.scroll-pane-control{
+    -fx-min-width: 150px;
+    -fx-max-width: 250px;
+}
+
+.scroll-pane-form{
+    -fx-pref-width: 35px;
+    -fx-alignment: top-center;
+    -fx-spacing: 8px;
+    -fx-padding: 10px 5px;
+    -fx-fill-width: true;
+}
+
+.scroll-pane-form .jfx-button{
+    -fx-content-display: graphic-only;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+    -fx-padding: 6px;
+}
+
+.scroll-pane-form .jfx-button:hover{
+    -fx-background-color: #4D4E56;
+}
+
+.scroll-pane-form .selected-shape-menu,
+.scroll-pane-form .selected-shape-menu:hover{
+    -fx-background-color: -app-primary;
+}
+
+.scroll-pane-form .jfx-button .ikonli-font-icon{
+    -fx-icon-color: -app-white;
+    -fx-icon-size: 20px;
+}
+
+/******************************scrool bar**************************/
+
+.scroll-bar{
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+    -fx-border-width: 0;
+}
+
+.scroll-bar *,
+.scroll-bar,
+.corner{
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: #bbb;
+    -fx-opacity: 0.2;
+    -fx-background-radius: 0px;
+    -fx-border-width: 0;
+    -fx-max-width: 7px;
+}
+
+.corner{
+    -fx-background-color: -app-bg-color;
+}
+
+.scroll-bar .thumb:pressed,
+.scroll-bar .thumb:hover
+{
+    -fx-opacity: 1;
+}
+
+.scroll-bar .track,
+.scroll-bar .track-background{
+    -fx-background-color: -app-bg-color;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow,
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button{
+    -fx-pref-width: 0;
+    -fx-pref-heigth: 0;
+}
+
+/********************** Dialog *****************************/
+
+.jfx-dialog-overlay-pane > *,
+.jfx-dialog-layout{
+    -fx-background-radius: 5px;
+}
+
+.jfx-dialog-layout {
+    -fx-background-color: -app-bg-color;
+    -fx-text-fill: -app-white;
+}
+
+/***************************** button **********************/
+
+.jfx-button{
+    -fx-padding: 7px 14px;
+    -fx-text-fill: -app-white;
+}
+
+.button-primary{
+    -fx-background-color: -app-primary;
+}
+
+.button-danger{
+    -fx-background-color: -app-danger;
+}
+
+.button-dark{
+    -fx-background-color: -app-bg-dark;
+}
+
+.button-bordered {
+    -fx-border-color: -app-border;
+    -fx-border-radius: 4px;
+}
+
+/********************* FOOTER **************************/
+
+.footer {
+    -fx-border-width: 1px 0px 0px 0px;
+    -fx-border-color: -app-border;
+    -fx-background-color: -app-bg-color;
+}
